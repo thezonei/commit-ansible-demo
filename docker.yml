@@ -48,15 +48,15 @@
         src: "index.html"
         dest: "/myfile/"
         
-    - name: Creating container usint HTTPD Image 
+    - name: Creating container using HTTPD Image
       docker_container:
         name: "MyWebServer3"
         image: "httpd"
-        stage: started
+        state: started
         exposed_ports:
           - "80"
         ports:
           - "80:80"
         volumes:
-          - /myfile:/usr/local/apache2/htdocs/
+          - "/myfile:/usr/local/apache2/htdocs/
       
