@@ -48,8 +48,8 @@
         src: "index.html"
         dest: "/myfile/"
         
-     - name: Creating container using HTTPD Image
-       docker_container:
+    - name: Creating container using HTTPD Image
+      docker_container:
         name: "MyWebServer3"
         image: "httpd"
         state: started
