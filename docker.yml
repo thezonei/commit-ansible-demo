@@ -23,7 +23,7 @@
       
     - name: Add Docker Repository
       apt_repository:
-        repo: deb https://download.docker.com/linux/ubuntu focal stable
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
         state: present
 
     - name: Update apt and install docker-ce and docker-compose
@@ -42,6 +42,7 @@
       file:
         path: "/myfile"
         state: dictionary
+        mode: "0755"  
       
     - name: "Copying local files"
       copy:
@@ -54,9 +55,9 @@
         image: "httpd"
         stage: started
         exposed_ports:
-        - "80"
+          - "80"
         ports:
-        - "80:80"
+          - "80:80"
         volumes:
           - /myfile:/usr/local/apache2/htdocs/
       
