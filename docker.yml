@@ -37,10 +37,10 @@
       pip:
         name: docker
         
-    - name: "Creating folder and copying html file"
+    - name: Creating folder and copying html file
       file:
         path: "/myfile"
-        state: dictionary
+        state: directory
         mode: "0755"  
       
     - name: "Copying local files"
