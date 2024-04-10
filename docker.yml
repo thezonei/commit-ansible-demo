@@ -58,5 +58,5 @@
         ports:
           - "80:80"
         volumes:
-          - "/myfile:/usr/local/apache2/htdocs/  
+          - "/myfile:/usr/local/apache2/htdocs/"  
       
