@@ -1,3 +1,4 @@
+---
 - hosts: ec2-instance
 
   become: true
