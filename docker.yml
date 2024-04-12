@@ -54,9 +54,9 @@
         image: "httpd"
         state: started
         exposed_ports:
-          - "80"
+          - "81"
         ports:
-          - "80:80"
+          - "81:81"
         volumes:
           - "/myfile:/usr/local/apache2/htdocs/"  
       
